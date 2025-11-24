@@ -1,0 +1,190 @@
+/* ====== GLOBAL PAGE DESIGN ====== */
+.home-container {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #4da6ff;
+  text-shadow: 0px 0px 10px #4da6ff;
+}
+
+.hero h3 {
+  margin-top: 10px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.hero a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  box-shadow: 0 0 15px #4da6ff;
+}
+
+/* ====== GLASS CARD DESIGN ====== */
+.skills-section,
+.experience-section {
+  margin-top: 40px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideUp 1s ease-in-out;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+/* ====== SKILLS TAGS DESIGN ====== */
+.skills-section h2,
+.experience-section h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.skills-list span {
+  background: #4da6ff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 25px;
+  margin: 6px;
+  display: inline-block;
+  font-size: 0.95rem;
+  box-shadow: 0px 0px 10px rgba(77, 166, 255, 0.4);
+  transition: transform 0.2s;
+}
+
+.skills-list span:hover {
+  transform: scale(1.15);
+}
+
+/* ====== UL LIST STYLE ====== */
+.experience-section ul li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  gap: 40px;
+}
+
+.hero-left {
+  max-width: 55%;
+}
+
+.profile-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 35px rgba(255, 100, 200, 0.35);
+  transition: 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 55px rgba(255, 100, 200, 0.55);
+}
+
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-frame {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #ff7ad0, #9a5cff);
+  box-shadow: 0 0 30px rgba(255, 100, 200, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SKILLS TAGS: responsive wrap + gap */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-list span {
+  background: linear-gradient(90deg, #4da6ff, #6fc7ff);
+  color: #041028;
+  padding: 10px 14px;
+  border-radius: 999px;
+  margin: 4px;
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0px 6px 18px rgba(77, 166, 255, 0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.skills-list span:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0px 14px 30px rgba(77,166,255,0.18);
+}

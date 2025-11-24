@@ -1,13 +1,57 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+
+  /* Luxury Violet → Pink Gradient */
+  background: linear-gradient(135deg, #2a0a3d, #3b0f57, #5f0f87, #a8147e);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Animated gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Floating particle lights */
+.particle {
+  position: fixed;
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 180, 255, 0.7);
+  border-radius: 50%;
+  animation: floatUp 10s linear infinite;
+  filter: blur(1px);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.3);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+
+/* Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(255, 110, 255, 0.25);
 }
